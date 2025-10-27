@@ -625,6 +625,50 @@ function closemenu() {
 
 <a href="#header" class="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
 
-   
+
+
+<!--  CHATBOT-->
+
+<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "c2528d3b-5f76-4f0a-9f93-2e10383120d8", // The ID of this integration.
+    region: "us-south", // The region your integration is hosted in.
+    serviceInstanceID: "3171bd5e-2c6d-44a2-98b0-8e4dfe0a95c9", // The ID of your service instance.
+    onLoad: async (instance) => { await instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+
+ <!-- Chatbot trigger message -->
+<!-- <div id="chatbotPrompt" style="position: fixed; bottom: 20px; right: 20px; background: #1e90ff; color: white; padding: 10px 15px; border-radius: 8px; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.3); font-family: Arial, sans-serif;">
+  💬 Need help? Click here to chat!
+</div>
+
+<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "c2528d3b-5f76-4f0a-9f93-2e10383120d8",
+    region: "us-south",
+    serviceInstanceID: "3171bd5e-2c6d-44a2-98b0-8e4dfe0a95c9",
+    onLoad: async (instance) => {
+      // Don't render immediately — wait for click
+      document.getElementById("chatbotPrompt").addEventListener("click", async () => {
+        await instance.render();
+        document.getElementById("chatbotPrompt").style.display = "none"; // hide the message once chat is opened
+      });
+    }
+  };
+
+  setTimeout(function() {
+    const t = document.createElement('script');
+    t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" +
+      (window.watsonAssistantChatOptions.clientVersion || 'latest') +
+      "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>  -->
 </body>
 </html> 
